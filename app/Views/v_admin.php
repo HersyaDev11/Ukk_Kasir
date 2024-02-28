@@ -103,11 +103,20 @@
         <canvas id="myChart" width="100%" height="35px"></canvas>
 </div>
 
-<?php foreach ($grafik as $key => $value){
-  $tgl[] = $value['tgl_jual'];
-  $total[] = $value['total_harga'];
-  $untung[] = $value['untung'];
-}  ?>
+<?php
+
+if ($grafik == null){
+  $tgl[] = 0;
+  $total[] = 0;
+  $untung[]= 0;
+}else{
+  foreach ($grafik as $key => $value){
+    $tgl[] = $value['tgl_jual'];
+    $total[] = $value['total_harga'];
+    $untung[] = $value['untung'];
+  } 
+}
+
 
 <script>
 const ctx = document.getElementById('myChart');
