@@ -66,7 +66,7 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">Pendapatan Hari Ini</span>
-                <span class="info-box-number">Rp <?= $p_hari_ini['total_harga'] ?></span>
+                <span class="info-box-number">Rp <?= $p_hari_ini == null ?'0' :($p_hari_ini['total_harga'])</span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -79,7 +79,7 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">Pendapatan Bulan Ini</span>
-                <span class="info-box-number">Rp<?= $p_bulan_ini['total_harga'] ?></span>
+                <span class="info-box-number">Rp<?= $p_bulan_ini == null ?'0' :($p_bulan_ini['total_harga']) ?></span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -92,7 +92,7 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">Pendapatan Tahun Ini</span>
-                <span class="info-box-number"> Rp <?= $p_hari_ini['total_harga'] ?></span>
+                <span class="info-box-number"> Rp <?= $p_tahun_ini == null ?'0' :($p_hari_ini['total_harga']) ?></span>
               </div>
               <!-- /.info-box-content -->
             </div>
